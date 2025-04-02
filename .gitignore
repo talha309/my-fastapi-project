@@ -1,0 +1,7 @@
+# Ignore all environment files
+.env
+.env.*
+
+# Ignore Alembic migration folder and cache
+alembic/
+alembic.ini
