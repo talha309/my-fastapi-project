@@ -2,11 +2,9 @@ from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
-import os
 
 from alembic import context
-from models.todo_model import Base
-from config.database import DATABASE_URL
+from models.user_model import Base
 
 
 # this is the Alembic Config object, which provides
@@ -80,3 +78,6 @@ if context.is_offline_mode():
     run_migrations_offline()
 else:
     run_migrations_online()
+
+# poetry run alembic revision --autogenerate -m "Initial migration"
+# poetry run alembic upgrade head
